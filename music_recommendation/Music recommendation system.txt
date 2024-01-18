@@ -1,0 +1,21 @@
+Dataset:
+
+1. Dataset is from kaggle. https://www.kaggle.com/datasets/notshrirang/spotify-million-song-dataset
+2. This file conatins 4 columns. 
+3. Removed link column. 
+
+Model_Training.py
+1. The dataset from kaggle is loaded here. As per system capacity, I used only 5000 rows.
+2. Cleaning and stemming is been perfomed on this dataset. 
+3. TFIDF vectoriser has been used to convert the words into vectors. 
+4. Cosine similarity is used to calculate the similarity. 
+5. Model is saved as a pickle file. And used in next step. 
+
+App.py
+
+1. We need to import the required libraries like streamlit, spotipy and impoort the already created pickle file.
+2. We are using Spotify developer account to develop this project. For this, we need to signup to spotify and create a developer account. 
+3. From this developer account, we need to get the client id and secret and paste it in this code
+4. To access Spotify web API, we use SpotifyClientCredentials class and give our id and password. This will connect us to spotify web.
+5. Model is based on cosine similarity. The generated similairy distance will be used here to recommend. 
+                                                                                                                                                                                                                                                                           
